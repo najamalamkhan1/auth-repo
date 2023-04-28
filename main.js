@@ -7,8 +7,7 @@ app.use(cors())
 
 // Mongoose connection string
 mongoose.connect(
-    'mongodb+srv://najamalamkhan1321:najam1234@cluster0.ycjjcz2.mongodb.net/loginorsignup'
-)
+    .env.process.mongoose_url
 // database connect
 const db = mongoose.connection;
 db.on('error',(error)=>{
